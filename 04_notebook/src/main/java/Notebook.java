@@ -52,6 +52,30 @@ public class Notebook {
         }
     }
 
+    /**
+     * Remove a note.
+     *
+     * @param noteNumber The index of the note to be removed.
+     */
+    public void removeNote(int noteNumber) {
+        if (noteNumber >= 0 && noteNumber < numberOfNotes() ) {
+            notes.remove(noteNumber);
+        }
+    }
+
+    /**
+     * List all notes with the corresponding index.
+     *
+     */
+    public void listNotes() {
+        int index = 0;
+        while (index < numberOfNotes()) {
+            System.out.println((index + 1) + ": " + notes.get(index));
+
+            index++;
+        }
+    }
+
     @Override
     public String toString() {
 
