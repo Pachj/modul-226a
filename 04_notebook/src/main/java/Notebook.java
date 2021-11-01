@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 /**
@@ -11,13 +12,14 @@ import java.util.Iterator;
  */
 public class Notebook {
     // Storage for an arbitrary number of notes.
-    private ArrayList<String> notes;
+    /*private ArrayList<String> notes;*/
+    private ArrayList<Note> notes;
 
     /**
      * Perform any initialization that is required for the notebook.
      */
     public Notebook() {
-        notes = new ArrayList<String>();
+        notes = new ArrayList<Note>();
     }
 
     /**
@@ -25,8 +27,12 @@ public class Notebook {
      * 
      * @param note The note to be stored.
      */
-    public void storeNote(String note) {
+    /*public void storeNote(String note) {
         notes.add(note);
+    }*/
+
+    public void storeNote(String text, String termin, String author) {
+        notes.add(new Note(text, termin, author));
     }
 
     /**
@@ -97,5 +103,4 @@ public class Notebook {
         }
         return mynotes;
     }
-
 }
