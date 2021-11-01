@@ -76,6 +76,15 @@ public class Notebook {
         }
     }
 
+    // not sure if this is right
+    public void listNotesIterator() {
+        Iterator<String> iterator = notes.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
     @Override
     public String toString() {
 
