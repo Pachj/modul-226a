@@ -74,20 +74,22 @@ public class Notebook {
      *
      */
     public void listNotes() {
-        int index = 0;
-        while (index < numberOfNotes()) {
-            System.out.println((index + 1) + ": " + notes.get(index));
 
-            index++;
+//      for loop
+        for (int i = 0; i < numberOfNotes(); i++) {
+            int index = i + 1;
+            System.out.println(index + ": " + notes.get(i));
         }
-    }
 
-    // not sure if this is right
-    public void listNotesIterator() {
-        Iterator<String> iterator = notes.iterator();
+//      Lambda expression
+        notes.forEach((n) -> System.out.println((notes.indexOf(n) + 1) + ": " + n));
 
+//      Iterator
+        Iterator<Note> iterator = notes.iterator();
+        int index = 1;
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+            System.out.println(index + ": " + iterator.next());
+            index++;
         }
     }
 
