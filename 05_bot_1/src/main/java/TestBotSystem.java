@@ -8,8 +8,10 @@ public class TestBotSystem {
 		// create a new support system
 		BotSystem botSystem = new BotSystem();
 		// start the system
-		botSystem.start();
+		//botSystem.start();
 
+		RandomTester randomTester = new RandomTester();
+		System.out.println(randomTester.getResponse());
 	}
 
 }

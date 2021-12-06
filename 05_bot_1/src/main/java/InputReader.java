@@ -30,6 +30,7 @@ public class InputReader
     {
         System.out.print("> ");                // print prompt
         String inputLine = readInputLine();
+        inputLine = inputLine.trim().toLowerCase();
 
         return inputLine;
     }
